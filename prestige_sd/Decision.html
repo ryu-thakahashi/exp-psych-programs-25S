@@ -1,0 +1,16 @@
+{{ block title }} 貢献ポイントを選ぶ {{ endblock }} {{ block content }}
+
+<p>グループに貢献するポイントを選んでください．</p>
+<input
+    type="range"
+    name="give"
+    min="0"
+    max="{{ C.ENDOWMENT }}"
+    oninput="updateDescription(this)"
+/>
+<p id="description"></p>
+<div style="display: none">{{ formfields }}</div>
+{{ next_button }}
+
+<script src="{{ static 'prestige_sd/slider_live.js'}}"></script>
+{{ endblock }}

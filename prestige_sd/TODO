@@ -1,0 +1,14 @@
+x 全員が意思決定をするまで，ResultsWaitPage で待機させる
+x グループに all_contributed という変数を追加する
+x all_contributed を計算する関数を追加する
+x 一人一人の利得を計算する
+x グループ単位で選択をまとめる
+x 参加者に一人一人の選択と利得をフィードバックする
+
+x group condition を三つ用意する
+x ※group condition によって選択が変わらない
+x group condition によって，フィードバックする情報を変える
+
+x group condition の割り当て方法についてNotebookLM に相談
+x （結果：https://notebooklm.google.com/notebook/38896152-cbf8-4023-911e-c37303dc48e1）
+group condition の割り当てを行う

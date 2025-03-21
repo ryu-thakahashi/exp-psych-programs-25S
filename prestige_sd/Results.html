@@ -1,0 +1,31 @@
+{{ block title }} 結果画面 {{ endblock }} {{ block content }}
+<p>結果は以下です．</p>
+<h3>あなたの結果</h3>
+<ul>
+    <li>あなたが貢献したポイント：
+        <strong>{{ player_results.contribution }}</strong>
+    </li>
+    <li>あなたが獲得したポイント：
+        <strong>{{ player_results.payoff }}</strong>
+    </li>
+</ul>
+
+
+<h3>他のプレイヤーの結果</h3>
+{{ for result in other_results }}
+<p>
+    <ul>
+        <li>
+            プレイヤー {{result.id}} さん
+        </li>
+        <ul>
+            <li>
+                貢献したポイント：<strong>{{ result.contribution }} </strong>
+            </li>
+            <li>
+                獲得ポイント：<strong>{{ result.payoff }} </strong>
+            </li>
+        </ul>
+    </ul>
+</p>
+{{ endfor }} {{ next_button }} {{ endblock }}
