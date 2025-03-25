@@ -1,0 +1,18 @@
+{
+  "name": "exp_psych_programs_25s",
+  "version": "1.0.0",
+  "description": "1. 実験の実施，授業の流れの説明，環境構築\r 2. 用語説明（1），実験の説明と解析結果，oTreeで実験を組むイメージ\r 3. 用語説明（2），simple_pd の作成とデプロイ\r 4. 用語説明（3），simple_sd の作成とデプロイ，自作アプリの宿題\r 5. 用語説明（4），simple_tg の作成とデプロイ，自作アプリの宿題\r 6. 用語説明（5），自作アプリ案の相談と実装（1）\r 7. 用語説明（6），自作アプリ案の相談と実装（2）\r 8. 用語説明（7），自作アプリ案の実装（3）\r 9. 用語説明（8），自作アプリ案の実装（4）\r 10. 用語説明（9），実験の実施（1）\r 11. 実験の実施（2）\r 12. 分析の相談\r 13. 結果発表",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "survey-react-ui": "^2.0.1"
+  }
+}

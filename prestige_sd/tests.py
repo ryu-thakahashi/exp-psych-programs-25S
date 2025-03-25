@@ -33,6 +33,7 @@ class PlayerBot(Bot):
 
         if self.player.round_number == 1:
             yield Introduction
+            yield CheckTest, dict(is_bot=False)
 
         if (
             self.player.id_in_group == 1

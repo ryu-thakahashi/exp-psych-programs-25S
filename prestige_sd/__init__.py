@@ -33,6 +33,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    is_bot = models.BooleanField(initial=False)
     prev_contributions = models.CurrencyField()
     contribution = models.CurrencyField(min=0, max=C.ENDOWMENT)
     show_payoff = models.BooleanField()
@@ -78,6 +79,19 @@ class Introduction(Page):
         return player.round_number == 1
 
 
+class CheckTest(Page):
+    form_model = "player"
+    form_fields = ["is_bot"]
+
+    @staticmethod
+    def is_displayed(player: Player):
+        return player.round_number == 1
+
+    @staticmethod
+    def js_vars(player: Player):
+        return dict(is_bot=player.is_bot)
+
+
 class WaitForIntroduction(WaitPage):
     wait_for_all_groups = True
 
@@ -107,4 +121,11 @@ class Results(Page):
         }
 
 
-page_sequence = [Introduction, WaitForIntroduction, Decision, ResultsWaitPage, Results]
+page_sequence = [
+    Introduction,
+    CheckTest,
+    WaitForIntroduction,
+    Decision,
+    ResultsWaitPage,
+    Results,
+]

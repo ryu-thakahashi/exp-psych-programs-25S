@@ -1,0 +1,34 @@
+{{ block header }} {{ endblock}} {{ block title }} Page title {{ endblock }} {{
+block content }}
+
+<iframe
+	src="https://docs.google.com/presentation/d/e/2PACX-1vQZPQPBkbfTH2zueJC17agR_fYVfD02jo1yTJo6nICMvGS56HbHrtRxXNUP_84I7Dop20WT8cTCgFcf/embed?start=false&loop=false&delayms=60000"
+	frameborder="0"
+	width="auto"
+	height="auto"
+	allowfullscreen="true"
+	mozallowfullscreen="true"
+	webkitallowfullscreen="true"
+></iframe>
+
+<div style="display: none">{{ formfields }}</div>
+
+<link
+	href="https://unpkg.com/survey-core/survey-core.min.css"
+	type="text/css"
+	rel="stylesheet"
+/>
+<script
+	type="text/javascript"
+	src="https://unpkg.com/survey-core/survey.core.min.js"
+></script>
+<script
+	type="text/javascript"
+	src="https://unpkg.com/survey-js-ui/survey-js-ui.min.js"
+></script>
+
+<script src="{{ static 'prestige_sd/check_test/valid_bot.js'}}"></script>
+<script src="{{ static 'prestige_sd/check_test/valid_answers.js'}}"></script>
+<script src="{{ static 'prestige_sd/check_test/check_test_contents.js'}}"></script>
+
+{{ next_button }} {{ endblock }}
