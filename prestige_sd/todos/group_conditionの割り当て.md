@@ -1,0 +1,6 @@
+- [x] group condition を三つ用意する
+- [x] ※group condition によって選択が変わらない
+- [x] group condition によって，フィードバックする情報を変える
+- [x] group condition の割り当て方法について NotebookLM に相談
+- [x] （結果：https://notebooklm.google.com/notebook/38896152-cbf8-4023-911e-c37303dc48e1）
+- [x] group condition の割り当てを行う

@@ -27,13 +27,35 @@ class PlayerBot(Bot):
         },
     ]
 
+    correct_dict = {
+        "checktest_q1": 1,
+        "checktest_q2": 0,
+        "checktest_q3": 30,
+        "checktest_q4": 260,
+        "checktest_q5": 520,
+        "checktest_q6": 140,
+        "checktest_q7": 170,
+    }
+    incorrect_dict = {
+        "checktest_q1": 1,
+        "checktest_q2": 0,
+        "checktest_q3": 30,
+        "checktest_q4": 0,
+        "checktest_q5": 520,
+        "checktest_q6": 140,
+        "checktest_q7": 170,
+    }
+
     def play_round(self):
         case = self.case
         p_id = f"p{self.player.id_in_group}"
 
         if self.player.round_number == 1:
             yield Introduction
-            yield CheckTest, dict(is_bot=False)
+
+            if self.player.id_in_group == 1:
+                yield SubmissionMustFail(CheckTest, self.incorrect_dict)
+            yield CheckTest, self.correct_dict
 
         if (
             self.player.id_in_group == 1

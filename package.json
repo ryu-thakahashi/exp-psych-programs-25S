@@ -13,6 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "survey-core": "^2.0.2",
     "survey-react-ui": "^2.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
