@@ -2,4 +2,6 @@
 - [ ] case を basic だけに残す
 - [ ] case を basic だけにして，テストを通るまでリファクタリング
 - [ ] pyaoff のチェックを，calc_payoff 関数でできるようにする
-- [ ]
+- [ ] calc_payoff を独立した関数にする
+- [ ] calc_payoff を testable にする
+- [ ] set_payoffs をリファクタリングする

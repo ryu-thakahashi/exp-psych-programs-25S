@@ -1,3 +1,0 @@
-- [x] decision の基本ロジックの作成
-- [x] group_condtion の割り当て
-- [ ] check test の作成
