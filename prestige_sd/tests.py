@@ -9,53 +9,27 @@ class PlayerBot(Bot):
     cases = [
         {
             "case": "basic",
-            "p1": {"cont": 10, "payoff": 120},
-            "p2": {"cont": 10, "payoff": 120},
-            "p3": {"cont": 10, "payoff": 120},
+            "p1": {"cont": 10, "payoff": 110},
+            "p2": {"cont": 10, "payoff": 110},
+            "p3": {"cont": 10, "payoff": 110},
         },
         {
             "case": "different_contributions",
-            "p1": {"cont": 10, "payoff": 150},
-            "p2": {"cont": 20, "payoff": 140},
-            "p3": {"cont": 30, "payoff": 130},
+            "p1": {"cont": 10, "payoff": 130},
+            "p2": {"cont": 20, "payoff": 120},
+            "p3": {"cont": 30, "payoff": 110},
         },
         {
             "case": "max_contributions",
-            "p1": {"cont": 100, "payoff": 300},
-            "p2": {"cont": 100, "payoff": 300},
-            "p3": {"cont": 100, "payoff": 300},
+            "p1": {"cont": 100, "payoff": 200},
+            "p2": {"cont": 100, "payoff": 200},
+            "p3": {"cont": 100, "payoff": 200},
         },
     ]
-
-    correct_dict = {
-        "checktest_q1": 1,
-        "checktest_q2": 0,
-        "checktest_q3": 30,
-        "checktest_q4": 260,
-        "checktest_q5": 520,
-        "checktest_q6": 140,
-        "checktest_q7": 170,
-    }
-    incorrect_dict = {
-        "checktest_q1": 1,
-        "checktest_q2": 0,
-        "checktest_q3": 30,
-        "checktest_q4": 0,
-        "checktest_q5": 520,
-        "checktest_q6": 140,
-        "checktest_q7": 170,
-    }
 
     def play_round(self):
         case = self.case
         p_id = f"p{self.player.id_in_group}"
-
-        if self.player.round_number == 1:
-            yield Introduction
-
-            if self.player.id_in_group == 1:
-                yield SubmissionMustFail(CheckTest, self.incorrect_dict)
-            yield CheckTest, self.correct_dict
 
         if (
             self.player.id_in_group == 1
@@ -69,6 +43,9 @@ class PlayerBot(Bot):
 
         yield Decision, dict(contribution=case[p_id]["cont"])
         yield Results
+        print("player.payoff: ", self.player.payoff)
+        print("case[p_id]['payoff']: ", case[p_id]["payoff"])
+
         assert self.player.payoff == case[p_id]["payoff"]
 
         another_res_dict = generate_others_results_list(self.player)[0]

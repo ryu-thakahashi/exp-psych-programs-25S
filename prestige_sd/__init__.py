@@ -1,4 +1,5 @@
 import random
+import time
 
 from otree.api import *
 
@@ -11,7 +12,7 @@ class C(BaseConstants):
     NAME_IN_URL = "prestige_sd"
     PLAYERS_PER_GROUP = 3
     NUM_ROUNDS = 3
-    BC_RATIO = 3
+    BC_RATIO = 2
     ENDOWMENT = 100
 
 
@@ -20,8 +21,8 @@ class Subsession(BaseSubsession):
 
 
 def creating_session(subsession: Subsession):
-    if subsession.round_number == 1:
-        subsession.group_randomly()
+    if subsession.round_number > 1:
+        subsession.group_like_round(1)
 
     for p in subsession.get_players():
         p.show_payoff = random.choice([True, False])
@@ -34,46 +35,13 @@ class Group(BaseGroup):
 
 class Player(BasePlayer):
     prev_contributions = models.CurrencyField()
+    prev_show_payoff = models.BooleanField()
+    prev_show_contribution = models.BooleanField()
+
     contribution = models.CurrencyField(min=0, max=C.ENDOWMENT)
     show_payoff = models.BooleanField()
     show_contribution = models.BooleanField()
-
-    checktest_q1 = models.IntegerField(
-        label="Q1. あなたは毎回意志決定をする前に 100 ポイントを与えられる",
-        choices=[
-            [1, "正しい"],
-            [0, "間違い"],
-        ],
-        widget=widgets.RadioSelectHorizontal,
-    )
-    checktest_q2 = models.IntegerField(
-        label="Q2. 意志決定は 10 回行われる",
-        choices=[
-            [1, "正しい"],
-            [0, "間違い"],
-        ],
-        widget=widgets.RadioSelectHorizontal,
-    )
-    checktest_q3 = models.IntegerField(
-        label="Q3. あなたが 70 ポイントを貢献した場合，あなたの手元には何ポイント残りますか？",
-        min=0,
-    )
-    checktest_q4 = models.IntegerField(
-        label="Q4. あなたが 70 ポイント，他のプレイヤーのAさんが 90 ポイント，Bさんが 100 ポイントをそれぞれ貢献した場合，グループの合計ポイント（増やされる前）はいくつになりますか？",
-        min=0,
-    )
-    checktest_q5 = models.IntegerField(
-        label="Q5. 「Q4」の状況で，グループのポイントが二倍に増やされた場合，ポイントはいくつになりますか？",
-        min=0,
-    )
-    checktest_q6 = models.IntegerField(
-        label="Q6. 「3人グループで貢献したポイントが（Q4）で，その合計ポイントが二倍された結果（Q5）になった．」この時，あなたに分配されるポイントはいくつになりますか？",
-        min=0,
-    )
-    checktest_q7 = models.IntegerField(
-        label="Q7. 「Q3」～「Q6」の結果を踏まえて，あなたの獲得ポイントはいくつになりますか？",
-        min=0,
-    )
+    checktest_completed_time = models.FloatField()
 
 
 # FUNCTIONS
@@ -109,53 +77,8 @@ def generate_others_results_list(player: Player):
 
 
 # PAGES
-class Introduction(Page):
-    @staticmethod
-    def is_displayed(player: Player):
-        return player.round_number == 1
-
-
-class CheckTest(Page):
-    form_model = "player"
-    form_fields = [
-        "checktest_q1",
-        "checktest_q2",
-        "checktest_q3",
-        "checktest_q4",
-        "checktest_q5",
-        "checktest_q6",
-        "checktest_q7",
-    ]
-
-    @staticmethod
-    def is_displayed(player: Player):
-        return player.round_number == 1
-
-    @staticmethod
-    def error_message(player, values):
-        correct_dict = {
-            "checktest_q1": 1,
-            "checktest_q2": 0,
-            "checktest_q3": 30,
-            "checktest_q4": 260,
-            "checktest_q5": 520,
-            "checktest_q6": 140,
-            "checktest_q7": 170,
-        }
-        print(values)
-        for field, correct_value in correct_dict.items():
-            if field in values and values[field] != correct_value:
-                return "あなたは全問正解していません。もう一度やり直してください。"
-        return None
-
-
-def is_bot_error_message(player: Player, value):
-    if value:
-        return "全問正解していない"
-
-
-class WaitForIntroduction(WaitPage):
-    wait_for_all_groups = True
+class WaitForDecision(WaitPage):
+    group_by_arrival_time = True
 
 
 class Decision(Page):
@@ -183,11 +106,4 @@ class Results(Page):
         }
 
 
-page_sequence = [
-    Introduction,
-    CheckTest,
-    WaitForIntroduction,
-    Decision,
-    ResultsWaitPage,
-    Results,
-]
+page_sequence = [WaitForDecision, Decision, ResultsWaitPage, Results]

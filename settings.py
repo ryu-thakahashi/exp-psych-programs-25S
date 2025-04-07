@@ -19,8 +19,14 @@ SESSION_CONFIGS = [
         players_per_group=2,
     ),
     dict(
-        name="prestige_sd_demo",
+        name="prestige_sd_decision_only",
         app_sequence=["prestige_sd"],
+        num_demo_participants=3,
+        players_per_group=3,
+    ),
+    dict(
+        name="prestige_sd_app",
+        app_sequence=["prestige_sd_checktest", "prestige_sd"],
         num_demo_participants=3,
         players_per_group=3,
     ),
