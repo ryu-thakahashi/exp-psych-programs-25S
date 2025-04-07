@@ -1,0 +1,19 @@
+participant.id_in_session,participant.code,participant.label,participant._is_bot,participant._index_in_pages,participant._max_page_index,participant._current_app_name,participant._current_page_name,participant.time_started_utc,participant.visited,participant.mturk_worker_id,participant.mturk_assignment_id,participant.payoff,player.id_in_group,player.role,player.payoff,player.checktest_q1,player.checktest_q2,player.checktest_q3,player.checktest_q4,player.checktest_q5,player.checktest_q6,player.checktest_q7,group.id_in_subsession,subsession.round_number,session.code,session.label,session.mturk_HITId,session.mturk_HITGroupId,session.comment,session.is_demo
+1,ahryqenv,,1,15,14,prestige_sd,Results,2025-04-07 08:10:57.650734,1,,,330.0,1,,0.0,1,0,30,260,520,140,170,1,1,t5rszcgs,,,,,0
+2,jgyhwlyr,,1,15,14,prestige_sd,Results,2025-04-07 08:10:57.675002,1,,,330.0,2,,0.0,1,0,30,260,520,140,170,1,1,t5rszcgs,,,,,0
+3,68ji3ys1,,1,15,14,prestige_sd,Results,2025-04-07 08:10:57.704302,1,,,330.0,3,,0.0,1,0,30,260,520,140,170,1,1,t5rszcgs,,,,,0
+4,i5szffsg,,1,15,14,prestige_sd,Results,2025-04-07 08:10:57.714876,1,,,330.0,4,,0.0,1,0,30,260,520,140,170,1,1,t5rszcgs,,,,,0
+5,0nzdzm28,,1,15,14,prestige_sd,Results,2025-04-07 08:10:57.735287,1,,,330.0,5,,0.0,1,0,30,260,520,140,170,1,1,t5rszcgs,,,,,0
+6,o1regpct,,1,15,14,prestige_sd,Results,2025-04-07 08:10:57.744979,1,,,330.0,6,,0.0,1,0,30,260,520,140,170,1,1,t5rszcgs,,,,,0
+1,m9kr3h7h,,1,15,14,prestige_sd,Results,2025-04-07 08:11:00.436043,1,,,390.0,1,,0.0,1,0,30,260,520,140,170,1,1,77bssczk,,,,,0
+2,xvqjl47j,,1,15,14,prestige_sd,Results,2025-04-07 08:11:00.458558,1,,,390.0,2,,0.0,1,0,30,260,520,140,170,1,1,77bssczk,,,,,0
+3,hg2pa01r,,1,15,14,prestige_sd,Results,2025-04-07 08:11:00.481970,1,,,360.0,3,,0.0,1,0,30,260,520,140,170,1,1,77bssczk,,,,,0
+4,94fgl5qw,,1,15,14,prestige_sd,Results,2025-04-07 08:11:00.503579,1,,,330.0,4,,0.0,1,0,30,260,520,140,170,1,1,77bssczk,,,,,0
+5,sjpivpov,,1,15,14,prestige_sd,Results,2025-04-07 08:11:00.524267,1,,,360.0,5,,0.0,1,0,30,260,520,140,170,1,1,77bssczk,,,,,0
+6,2273lvtx,,1,15,14,prestige_sd,Results,2025-04-07 08:11:00.541577,1,,,330.0,6,,0.0,1,0,30,260,520,140,170,1,1,77bssczk,,,,,0
+1,9n70hji7,,1,15,14,prestige_sd,Results,2025-04-07 08:11:03.647252,1,,,600.0,1,,0.0,1,0,30,260,520,140,170,1,1,v70p2h5q,,,,,0
+2,z51jc7xz,,1,15,14,prestige_sd,Results,2025-04-07 08:11:03.678518,1,,,600.0,2,,0.0,1,0,30,260,520,140,170,1,1,v70p2h5q,,,,,0
+3,mcv18476,,1,15,14,prestige_sd,Results,2025-04-07 08:11:03.686725,1,,,600.0,3,,0.0,1,0,30,260,520,140,170,1,1,v70p2h5q,,,,,0
+4,bnivbfax,,1,15,14,prestige_sd,Results,2025-04-07 08:11:03.697894,1,,,600.0,4,,0.0,1,0,30,260,520,140,170,1,1,v70p2h5q,,,,,0
+5,spttbrbq,,1,15,14,prestige_sd,Results,2025-04-07 08:11:03.708746,1,,,600.0,5,,0.0,1,0,30,260,520,140,170,1,1,v70p2h5q,,,,,0
+6,ba5jmuqh,,1,15,14,prestige_sd,Results,2025-04-07 08:11:03.743006,1,,,600.0,6,,0.0,1,0,30,260,520,140,170,1,1,v70p2h5q,,,,,0

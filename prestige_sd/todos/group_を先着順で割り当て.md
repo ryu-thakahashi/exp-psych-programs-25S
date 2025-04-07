@@ -2,3 +2,5 @@
 - [x] 先着順でグループを分けるロジックを ChatGPT に相談する
 - [x] テストコードの作成を依頼する
 - [x] ロジックを実装する
+- [x] 分割したアプリを整形する
+- [x] prev_show_payoff と prev_show_contribution を記録できるようにする

@@ -49,7 +49,10 @@ def set_previous_contribution(player: Player):
     if player.round_number == 1:
         return
 
-    player.prev_contributions = player.in_round(player.round_number - 1).contribution
+    prev_round_data = player.in_round(player.round_number - 1)
+    player.prev_contributions = prev_round_data.contribution
+    player.prev_show_payoff = prev_round_data.show_payoff
+    player.prev_show_contribution = prev_round_data.show_contribution
 
 
 def set_payoffs(group: Group):
