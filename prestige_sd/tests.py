@@ -43,8 +43,8 @@ class PlayerBot(Bot):
 
         yield Decision, dict(contribution=case[p_id]["cont"])
         yield Results
-        print("player.payoff: ", self.player.payoff)
-        print("case[p_id]['payoff']: ", case[p_id]["payoff"])
+        # print("player.payoff: ", self.player.payoff)
+        # print("case[p_id]['payoff']: ", case[p_id]["payoff"])
 
         assert self.player.payoff == case[p_id]["payoff"]
 

@@ -1,0 +1,19 @@
+participant.id_in_session,participant.code,participant.label,participant._is_bot,participant._index_in_pages,participant._max_page_index,participant._current_app_name,participant._current_page_name,participant.time_started_utc,participant.visited,participant.mturk_worker_id,participant.mturk_assignment_id,participant.payoff,player.id_in_group,player.role,player.payoff,group.id_in_subsession,subsession.round_number,session.code,session.label,session.mturk_HITId,session.mturk_HITGroupId,session.comment,session.is_demo
+1,zqpo1yva,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:27.954053,1,,,330.0,1,,0.0,1,1,gtpnfapa,,,,,0
+2,uplaffzw,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:27.978915,1,,,330.0,2,,0.0,1,1,gtpnfapa,,,,,0
+3,epgt8uq7,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:27.989453,1,,,330.0,3,,0.0,1,1,gtpnfapa,,,,,0
+4,whyuiiuh,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:28.024177,1,,,330.0,4,,0.0,1,1,gtpnfapa,,,,,0
+5,844gdctq,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:28.054623,1,,,330.0,5,,0.0,1,1,gtpnfapa,,,,,0
+6,5o0f79zm,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:28.062955,1,,,330.0,6,,0.0,1,1,gtpnfapa,,,,,0
+1,qiayp3k0,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:30.876132,1,,,390.0,1,,0.0,1,1,daqmnhiq,,,,,0
+2,or8gejcd,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:30.906462,1,,,390.0,2,,0.0,1,1,daqmnhiq,,,,,0
+3,03ji14sv,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:30.940500,1,,,360.0,3,,0.0,1,1,daqmnhiq,,,,,0
+4,zvmt64wg,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:30.973572,1,,,330.0,4,,0.0,1,1,daqmnhiq,,,,,0
+5,yo0vbn4r,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:30.984613,1,,,360.0,5,,0.0,1,1,daqmnhiq,,,,,0
+6,0ttszpp7,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:31.018943,1,,,330.0,6,,0.0,1,1,daqmnhiq,,,,,0
+1,3wg0xf1i,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:33.543856,1,,,600.0,1,,0.0,1,1,ime02n7o,,,,,0
+2,rxat2lrs,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:33.568271,1,,,600.0,2,,0.0,1,1,ime02n7o,,,,,0
+3,ix792562,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:33.601959,1,,,600.0,3,,0.0,1,1,ime02n7o,,,,,0
+4,4luqems1,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:33.634438,1,,,600.0,4,,0.0,1,1,ime02n7o,,,,,0
+5,bmzt5695,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:33.663947,1,,,600.0,5,,0.0,1,1,ime02n7o,,,,,0
+6,jjssbn5p,,1,15,15,thanks_page,ThanksPage,2025-04-07 09:27:33.694624,1,,,600.0,6,,0.0,1,1,ime02n7o,,,,,0

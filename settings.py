@@ -26,7 +26,13 @@ SESSION_CONFIGS = [
     ),
     dict(
         name="prestige_sd_app",
-        app_sequence=["prestige_sd_checktest", "prestige_sd"],
+        app_sequence=["prestige_sd_checktest", "prestige_sd", "thanks_page"],
+        num_demo_participants=3,
+        players_per_group=3,
+    ),
+    dict(
+        name="thanks_page",
+        app_sequence=["thanks_page"],
         num_demo_participants=3,
         players_per_group=3,
     ),

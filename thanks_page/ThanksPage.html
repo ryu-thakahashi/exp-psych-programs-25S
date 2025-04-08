@@ -1,0 +1,15 @@
+{{ block title }} ご参加いただきありがとうございました！ {{ endblock }} {{ block
+content }}
+<p>あなたの合計獲得ポイントは<strong> {{res_payoff}} </strong> でした．</p>
+<p>以下のコードをメモし，実験者に伝えてください．</p>
+
+<h3>{{ code }}</h3>
+
+<div class="alert alert-danger" role="alert">
+	<p>
+		本番の実験では，参加確認コードの入力を依頼する
+		<br />
+		今回のデモでは伝える必要はない
+	</p>
+</div>
+{{ endblock }}
