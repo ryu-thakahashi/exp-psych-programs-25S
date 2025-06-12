@@ -1,0 +1,24 @@
+- プロジェクトのデプロイ
+- デプロイとは？
+  - アプリやシステムを実際に使える環境に公開すること
+  - たとえば、作った Web アプリをインターネット上にアップするイメージ
+  - 「ローカルで動いてたものを、みんなが使えるようにする」こと
+- oTree のアプリをデプロイする手順
+  - GitHub 上で新たなリポジトリを作成する
+  - GitHub のリポジトリに push する
+  - GitHub のリポジトリと Render を連携してデプロイ
+- 手順：GitHub 上で新たなリポジトリを作成する
+  - GitHub（https://github.com/）にログイン
+  - 新しいリポジトリの作成（otree_app）
+  - 参考：[【超入門】GitHub リポジトリの作り方 #Git - Qiita](https://qiita.com/ucan-lab/items/d594404d0d2c64a85a38)
+- 手順：GitHub のリポジトリに push する
+  - 呪文をターミナル（コマンドプロンプト）で実行していく
+    - `git init`
+    - `git add .`
+    - `git commit -m "first commit"`
+    - `git remote add origin <リポジトリのURL>`
+    - `git push -u origin master`
+  - 参考：[初心者向け]Git の理解/Github の初 push まで #GitHub - Qiita](https://qiita.com/A__Matsuda/items/f71a935612a55d6e674e)
+- 手順：GitHub のリポジトリと Render を連携してデプロイ
+  - 以下記事の手順に従う
+  - [Render で oTree を動かす · oTree 5 勉強会](https://yshimod.github.io/otree5-seminar/rendercom/)

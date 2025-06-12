@@ -129,7 +129,7 @@ class Subsession(BaseSubsession):
         if self.session.config.get("players_per_group"):
 self.session.config["players_per_group"] = C.PLAYERS_PER_GROUP
 
-self.session.config["players_per_group"] = C.PLAYERS_PER_GROUP
+            self.session.config["players_per_group"] = C.PLAYERS_PER_GROUP
 
 class Group(BaseGroup):
     def set_payoffs(group: BaseGroup):

@@ -1,5 +1,6 @@
 from otree.api import *
 
+
 doc = """
 Your app description
 """
@@ -49,6 +50,10 @@ def set_payoffs(group: Group):
 
 
 # PAGES
+class MyPage(Page):
+    pass
+
+
 class Send(Page):
     form_model = "group"
     form_fields = ["send_amount"]
@@ -107,4 +112,11 @@ class Results(Page):
         }
 
 
-page_sequence = [Send, WaitSend, SendBack, WaitSendbacker, ResultsWaitPage, Results]
+page_sequence = [
+    Send,
+    WaitSend,
+    SendBack,
+    WaitSendbacker,
+    ResultsWaitPage,
+    Results,
+]
